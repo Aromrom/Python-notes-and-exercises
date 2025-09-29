@@ -122,7 +122,9 @@ a multi-line string"""
 s4 = 'It\'s Python'  # escape character
 ```
 -Strings are immutable in Python.
+
 -Can use single ', double ", or triple """ for multi-line strings.
+
 
 🔹 Common Operations
 ```python
@@ -243,7 +245,9 @@ lst3 = [1, "two", 3.0, [4, 5]]  # mixed types allowed
 empty = []
 ```
 -Lists are mutable (you can change, add, or remove elements).
+
 -Can contain any type, including other lists.
+
 🔹 Common Operations
 ```python
 # Indexing
@@ -364,7 +368,9 @@ single = (42,)   # note the trailing comma!
 empty = ()       # empty tuple
 ```
 -Tuples are immutable (cannot be changed after creation).
+
 -Faster than lists and often used for fixed data.
+
 🔹 Common Operations
 ```python
 t[0]     # 1
@@ -414,6 +420,7 @@ t.count(2)   # count occurrences of 2
 t.index(3)   # index of first occurrence of 3
 ```
 🔹 Common Use Cases
+
 ✅ Return Multiple Values from a Function
 ```python
 def min_max(nums):
@@ -448,6 +455,7 @@ t = (1, 2, [3, 4])
 t[2][0] = 99   # Works! (list inside tuple is mutable)
 ```
 ✅ Tuples are immutable, lightweight, and hashable (can be dict keys), which makes them super handy for safe, fixed collections of data.
+
 ---
 ---
 
