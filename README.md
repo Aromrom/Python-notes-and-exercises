@@ -52,6 +52,7 @@ x << 2  # shift left (multiply by 2^2)
 x >> 2  # shift right (divide by 2^2)
 ```
 🔹 Common Integer Algorithms
+
 ✅ FizzBuzz
 ```python
 for i in range(1, 21):
@@ -177,6 +178,7 @@ s.startswith("Py")  # True
 s.endswith("on")    # True
 ```
 🔹 Common String Algorithms
+
 ✅ Palindrome Check
 ```python
 def is_palindrome(s):
@@ -302,6 +304,7 @@ nums = [1,2,3,4]
 modified = [x*2 if x%2==0 else x*3 for x in nums]  # [3,4,9,8]
 ```
 🔹 Common List Algorithms
+
 ✅ Reverse a List
 ```python
 lst[::-1]        # slicing
