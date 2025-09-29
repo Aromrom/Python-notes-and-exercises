@@ -351,3 +351,101 @@ lst_merged = lst + [6,7,8]
 # Multiply elements
 doubled = [x*2 for x in lst]
 ```
+## 📑 Tuples
+🔹 Basics
+```python
+t = (1, 2, 3, 4, 5)
+t2 = ("apple", "banana", "cherry")
+t3 = (1, "two", 3.0, [4, 5])  # mixed types
+single = (42,)   # note the trailing comma!
+empty = ()       # empty tuple
+```
+-Tuples are immutable (cannot be changed after creation).
+-Faster than lists and often used for fixed data.
+🔹 Common Operations
+```python
+t[0]     # 1
+t[-1]    # 5
+
+t[1:4]   # (2, 3, 4)
+t[:3]    # (1, 2, 3)
+t[2:]    # (3, 4, 5)
+
+len(t)   # 5
+3 in t   # True
+10 not in t  # True
+
+t + (6, 7)   # (1,2,3,4,5,6,7)
+t * 2        # (1,2,3,4,5,1,2,3,4,5)
+```
+🔹 Tuple Packing & Unpacking
+```python
+# Packing
+point = (3, 4)
+
+# Unpacking
+x, y = point
+print(x, y)  # 3 4
+
+# Swap variables
+a, b = 5, 10
+a, b = b, a   # a=10, b=5
+
+# Extended unpacking
+t = (1, 2, 3, 4, 5)
+a, *b, c = t
+print(a, b, c)  # 1 [2,3,4] 5
+```
+🔹 Built-in Functions
+```python
+max(t)    # largest element
+min(t)    # smallest element
+sum(t)    # sum of elements
+sorted(t) # returns a sorted list
+tuple([1,2,3])  # convert list to tuple
+list(t)   # convert tuple to list
+```
+🔹 Tuple Methods
+```python
+t.count(2)   # count occurrences of 2
+t.index(3)   # index of first occurrence of 3
+```
+🔹 Common Use Cases
+✅ Return Multiple Values from a Function
+```python
+def min_max(nums):
+    return min(nums), max(nums)
+
+lo, hi = min_max([3, 7, 2, 9])
+print(lo, hi)  # 2 9
+```
+✅ Store Immutable Data
+```python
+# Coordinates, database records, etc.
+point = (10, 20)
+rgb = (255, 128, 64)
+```
+✅ Use as Dictionary Keys (Immutable!)
+```python
+locations = {
+    (40.7128, -74.0060): "New York",
+    (34.0522, -118.2437): "Los Angeles"
+}
+```
+🔹 Tricks & Tips
+```python
+# Nested tuples
+nested = ((1,2), (3,4), (5,6))
+
+# Flatten nested tuples into list
+flat = [x for tup in nested for x in tup]  # [1,2,3,4,5,6]
+
+# Check immutability
+t = (1, 2, [3, 4])
+t[2][0] = 99   # Works! (list inside tuple is mutable)
+```
+✅ Tuples are immutable, lightweight, and hashable (can be dict keys), which makes them super handy for safe, fixed collections of data.
+---
+---
+
+Thank you for checking out this guide! 🙌
